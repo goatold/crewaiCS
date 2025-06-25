@@ -5,8 +5,8 @@ from crewai_tools import YoutubeVideoSearchTool
 from crewai_tools import ScrapeWebsiteTool
 
 @CrewBase
-class AutomatedCrewForContentResearchAndScriptCreationCrew():
-    """AutomatedCrewForContentResearchAndScriptCreation crew"""
+class AutomatedCrewForResearchAndContentCreation():
+    """Automated Crew For Research And Content Creation"""
 
     @agent
     def researcher(self) -> Agent:
@@ -68,10 +68,11 @@ class AutomatedCrewForContentResearchAndScriptCreationCrew():
 
     @crew
     def crew(self) -> Crew:
-        """Creates the AutomatedCrewForContentResearchAndScriptCreation crew"""
+        """Creates the Automated Crew For Research And ContentCreation"""
         return Crew(
             agents=self.agents, # Automatically created by the @agent decorator
             tasks=self.tasks, # Automatically created by the @task decorator
             process=Process.sequential,
+            memory=True,
             verbose=True,
         )

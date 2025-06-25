@@ -1,19 +1,19 @@
 [project]
-name = "automated_crew_for_content_research_and_script_creation"
+name = "automated_crew_for_research_and_content_creation"
 version = "0.1.0"
-description = "automated_crew_for_content_research_and_script_creation using crewAI"
-authors = [{ name = "Your Name", email = "you@example.com" }]
+description = "automated_crew_for_research_and_content_creation using crewAI"
+authors = [{ name = "Leo W", email = "leow2020g@gmail.com" }]
 requires-python = ">=3.10,<3.13"
 dependencies = [
     "crewai[tools]>=0.119.0,<1.0.0"
 ]
 
 [project.scripts]
-automated_crew_for_content_research_and_script_creation = "automated_crew_for_content_research_and_script_creation.main:run"
-run_crew = "automated_crew_for_content_research_and_script_creation.main:run"
-train = "automated_crew_for_content_research_and_script_creation.main:train"
-replay = "automated_crew_for_content_research_and_script_creation.main:replay"
-test = "automated_crew_for_content_research_and_script_creation.main:test"
+automated_crew_for_research_and_content_creation = "automated_crew_for_research_and_content_creation.main:run"
+run_crew = "automated_crew_for_research_and_content_creation.main:run"
+train = "automated_crew_for_research_and_content_creation.main:train"
+replay = "automated_crew_for_research_and_content_creation.main:replay"
+test = "automated_crew_for_research_and_content_creation.main:test"
 
 [build-system]
 requires = ["hatchling"]

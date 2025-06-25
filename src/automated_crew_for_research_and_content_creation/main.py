@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import sys
-from automated_crew_for_content_research_and_script_creation.crew import AutomatedCrewForContentResearchAndScriptCreationCrew
+from automated_crew_for_research_and_content_creation.crew import AutomatedCrewForResearchAndContentCreation
 
 # This main file is intended to be a way for your to run your
 # crew locally, so refrain from adding unnecessary logic into this file.
@@ -14,7 +14,7 @@ def run():
     inputs = {
         'year': 'sample_value'
     }
-    AutomatedCrewForContentResearchAndScriptCreationCrew().crew().kickoff(inputs=inputs)
+    AutomatedCrewForResearchAndContentCreationCreation().crew().kickoff(inputs=inputs)
 
 
 def train():
@@ -25,7 +25,7 @@ def train():
         'year': 'sample_value'
     }
     try:
-        AutomatedCrewForContentResearchAndScriptCreationCrew().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
+        AutomatedCrewForResearchAndContentCreation().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
 
     except Exception as e:
         raise Exception(f"An error occurred while training the crew: {e}")
@@ -35,7 +35,7 @@ def replay():
     Replay the crew execution from a specific task.
     """
     try:
-        AutomatedCrewForContentResearchAndScriptCreationCrew().crew().replay(task_id=sys.argv[1])
+        AutomatedCrewForContentResearchAndScriptCreation().crew().replay(task_id=sys.argv[1])
 
     except Exception as e:
         raise Exception(f"An error occurred while replaying the crew: {e}")
@@ -48,7 +48,7 @@ def test():
         'year': 'sample_value'
     }
     try:
-        AutomatedCrewForContentResearchAndScriptCreationCrew().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
+        AutomatedCrewForContentResearchAndScriptCreation().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
 
     except Exception as e:
         raise Exception(f"An error occurred while testing the crew: {e}")

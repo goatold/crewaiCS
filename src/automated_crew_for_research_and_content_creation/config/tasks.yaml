@@ -1,7 +1,7 @@
 ---
 gather_information:
   description: Use the SerperDevTool to search the internet for the latest scientific
-    discoveries and tech breakthroughs within the last month of {year}.
+    discoveries and tech breakthroughs within the last month since {date}.
   expected_output: A collection of articles, papers, and videos on recent scientific
     and tech advancements.
   async_execution: false
