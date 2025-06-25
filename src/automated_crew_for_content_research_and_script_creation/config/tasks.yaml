@@ -1,7 +1,7 @@
 ---
 gather_information:
   description: Use the SerperDevTool to search the internet for the latest scientific
-    discoveries and tech breakthroughs in {year}.
+    discoveries and tech breakthroughs within the last month of {year}.
   expected_output: A collection of articles, papers, and videos on recent scientific
     and tech advancements.
   async_execution: false
@@ -21,10 +21,9 @@ extract_details:
   async_execution: false
   agent: researcher
 summarize_information:
-  description: Summarize the gathered information into key points and insights. Extract
-    main concepts the discoveries and breakthroughs are based on.
-  expected_output: A concise summary and a list of related main concepts of the latest
-    scientific discoveries and tech breakthroughs.
+  description: Summarize the gathered information into a list of news items.
+  expected_output: A detailed summary list of news items with the original source
+    and main concepts related to that news.
   async_execution: false
   agent: summarizer
   context:
@@ -32,10 +31,10 @@ summarize_information:
   - find_videos
   - extract_details
 create_script:
-  description: Create a structured engaging, innovative blog post and video script
-    based on the summarized information.
-  expected_output: A well-written blog post and video script on the latest scientific
-    discoveries and tech breakthroughs.
+  description: Create a structured engaging, innovative blog post based on the summarized
+    information.
+  expected_output: A well-written blog post on the latest scientific discoveries and
+    tech breakthroughs.
   async_execution: false
   agent: writer
   context:
